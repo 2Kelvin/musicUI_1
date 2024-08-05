@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MusicUI_1</string>
+    <string name="song_name">You make me brave</string>
+    <string name="artist_name">Bethel Music &amp; Amanda Cook</string>
+    <string name="play_btn">Play button</string>
+    <string name="skip_next_btn">Skip next button</string>
+    <string name="pause_btn">Pause button</string>
+    <string name="skip_prev_btn">Skip previous button</string>
+    <string name="shuffle_btn">Shuffle button</string>
+    <string name="replay_btn">Replay button</string>
+    <string name="fav_btn">Favourite button</string>
 </resources>
