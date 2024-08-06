@@ -9,15 +9,12 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CutCornerShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Favorite
 import androidx.compose.material.icons.rounded.PlayArrow
@@ -30,7 +27,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -49,13 +45,12 @@ fun SongScreen(modifier: Modifier = Modifier) {
         Text(
             text = stringResource(id = R.string.song_name).uppercase(),
             fontWeight = FontWeight.Bold,
-            fontSize = 18.sp
+            fontSize = 22.sp,
+            modifier = Modifier.padding(bottom = 8.dp)
         )
 
         // artist's name
-        Text(
-            text = stringResource(id = R.string.artist_name),
-        )
+        Text(text = stringResource(id = R.string.artist_name))
 
         Spacer(modifier = Modifier.height(50.dp))
 
@@ -74,9 +69,12 @@ fun SongScreen(modifier: Modifier = Modifier) {
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .size(300.dp)
-                        .border(BorderStroke(2.dp, Color.Cyan), CircleShape)
+                        .border(
+                            BorderStroke(2.dp, Color.Cyan),
+                            CutCornerShape(bottomEnd = 60.dp, topEnd = 20.dp)
+                        )
                         .padding(5.dp)
-                        .clip(CircleShape)
+                        .clip(CutCornerShape(bottomEnd = 60.dp, topEnd = 20.dp))
                 )
             }
 
